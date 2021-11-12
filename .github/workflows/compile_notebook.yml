@@ -1,4 +1,4 @@
-name: PL
+name: COMPILE
 
 on:
   push:
