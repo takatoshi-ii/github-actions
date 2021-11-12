@@ -6,11 +6,6 @@ on:
       - master
     paths:
       - '**/*.ipynb'
-  pull_request:
-    branches: [ master ]
-    
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 jobs:
   build:
@@ -23,7 +18,7 @@ jobs:
     - name: Compile and Run the pipeline
       uses: chanwit/action-eksctl-kale@v2
       with:
-        region: us-east-2
+        region: ap-southeast-1
         cluster: eks-kubeflow
         awsAccessKeyId: ${{ secrets.AWS_ACCESS_KEY_ID }}
         awsSecretAccessKey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
