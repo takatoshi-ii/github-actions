@@ -1,0 +1,19 @@
+name: Execute notebook
+
+on: [push]
+
+# Allows you to run this workflow manually from the Actions tab
+workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python
+      uses: actions/setup-python@v1
+    - uses: takatoshioo1/run-notebook@v1
+      with:
+        notebook: "titanic_ml_comparison.ipynb"
+        isReport: False
+        poll: True
