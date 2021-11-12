@@ -16,7 +16,7 @@ jobs:
     steps:
 
     - name: Check out
-      uses: actions/checkout@v2
+      uses: actions/checkout@v1
 
     - name: Compile and Run the pipeline
       uses: chanwit/action-eksctl-kale@v2
