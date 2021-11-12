@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Set up Python
       uses: actions/setup-python@v1
-    - uses: takatoshioo1/run-notebook@v1
+    - uses: takatoshioo1/git_test01@v1
       with:
         notebook: "titanic_ml_comparison.ipynb"
         isReport: False
