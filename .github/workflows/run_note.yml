@@ -1,6 +1,10 @@
 name: Execute notebook
 
-on: [push]
+  push:
+    branches:
+      - master
+    paths:
+      - '**/*.ipynb'
 
 jobs:
   run:
