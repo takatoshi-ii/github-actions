@@ -6,11 +6,6 @@ on:
       - master
     paths:
       - '**/*.ipynb'
-  pull_request:
-    branches:
-      - master
-    paths:
-      - '**/*.ipynb'
       
 jobs:
   run:
