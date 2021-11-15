@@ -2,10 +2,7 @@ name: Execute notebook
 
 on:
   push:
-    branches:
-      - master
-    paths:
-      - '**/*.ipynb'
+    branches:[master]
       
 jobs:
   run:
