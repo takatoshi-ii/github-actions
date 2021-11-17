@@ -23,8 +23,8 @@ jobs:
     - name: Compile and Run the pipeline
       uses: chanwit/action-eksctl-kale@v2
       with:
-        region: us-east-2
-        cluster: eks-kubeflow
+        region: us-east-1
+        cluster: minikube
         awsAccessKeyId: ${{ secrets.AWS_ACCESS_KEY_ID }}
         awsSecretAccessKey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         notebook: titanic_ml_comparison.ipynb
