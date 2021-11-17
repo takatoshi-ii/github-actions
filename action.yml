@@ -1,0 +1,30 @@
+# action.yml
+name: 'EKSCtl Kale'
+description: 'EKSCtl Kale pipeline compiler for notebooks'
+inputs:
+  awsAccessKeyId:
+    description: 'awsAccessKeyId'
+    required: true
+  awsSecretAccessKey:
+    description: 'awsSecretAccessKey'
+    required: true
+  region:
+    description: 'AWS default region'
+    required: false
+    default: 'us-west-1'
+  cluster:
+    description: 'Name of EKS cluster'
+    required: true
+  notebook:
+    description: 'Notebook to compile'
+    required: true
+outputs: {}
+runs:
+  using: 'docker'
+  image: 897285198846.dkr.ecr.us-east-1.amazonaws.com/tensorflow-cpu-2.4.1-jupyterlab-kubeflow-kale:latest
+  env:
+    AWS_ACCESS_KEY_ID: ${{ inputs.awsAccessKeyId }}
+    AWS_SECRET_ACCESS_KEY: ${{ inputs.awsSecretAccessKey }}
+    AWS_DEFAULT_REGION: ${{ inputs.region }}
+    EKSCTL_CLUSTER_NAME: ${{ inputs.cluster }}
+    KALE_NOTEBOOK: ${{ inputs.notebook }}
