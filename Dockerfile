@@ -1,14 +1,5 @@
 FROM python:3.6-alpine
 
-LABEL "com.github.actions.name"="eksctl-kale-cmd"
-LABEL "com.github.actions.description"="EKSctl and Kubeflow Kale"
-LABEL "com.github.actions.icon"="server"
-LABEL "com.github.actions.color"="blue"
-
-LABEL "repository"="https://github.com/chanwit/action-eksctl-kale"
-LABEL "homepage"="https://github.com/chanwit/action-eksctl-kale"
-LABEL "maintainer"="Chanwit Kaewkasi <chanwit@weave.works>"
-
 RUN apk add --update --no-cache curl openssl git gcc musl-dev libffi-dev libressl-dev \
     && curl -s -o /usr/local/bin/aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.13.7/2019-06-11/bin/linux/amd64/aws-iam-authenticator \
     && chmod +x /usr/local/bin/aws-iam-authenticator \
