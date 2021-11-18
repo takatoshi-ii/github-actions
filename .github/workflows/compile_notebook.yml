@@ -24,6 +24,7 @@ jobs:
       uses: takatoshi001/git_test01@V2
       with:
         region: us-east-1
+        cluster: eks-kubeflow
         awsAccessKeyId: ${{ secrets.AWS_ACCESS_KEY_ID }}
         awsSecretAccessKey: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         notebook: titanic_ml_comparison.ipynb
