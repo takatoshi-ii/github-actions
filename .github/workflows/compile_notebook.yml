@@ -21,7 +21,7 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Compile and Run the pipeline
-      uses: takatoshi001/git_test01@V1
+      uses: takatoshi001/git_test01@V2
       with:
         region: us-east-1
         cluster: minikube
