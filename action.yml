@@ -21,7 +21,7 @@ inputs:
 outputs: {}
 runs:
   using: 'docker'
-  image: docker://897285198846.dkr.ecr.us-east-1.amazonaws.com/tensorflow-cpu-2.4.1-jupyterlab-kubeflow-kale:latest
+  image: 'Dockerfile'
   env:
     AWS_ACCESS_KEY_ID: ${{ inputs.awsAccessKeyId }}
     AWS_SECRET_ACCESS_KEY: ${{ inputs.awsSecretAccessKey }}
